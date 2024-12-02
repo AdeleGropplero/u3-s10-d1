@@ -30,6 +30,7 @@ class CommentArea extends Component {
   };
 
   componentDidMount() {
+    console.log("Mount");
     this.fetchComments();
   }
 
