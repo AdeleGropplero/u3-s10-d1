@@ -33,6 +33,15 @@ class CommentArea extends Component {
     this.fetchComments();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.selected !== this.props.selected) {
+      console.log("PropsCambiate");
+      this.fetchComments();
+    } else {
+      console.log("props uguali, i commenti restano gli stessi");
+    }
+  }
+
   render() {
     return (
       <>
