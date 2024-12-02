@@ -46,7 +46,7 @@ class CommentArea extends Component {
     return (
       <>
         <CommentList reviews={this.state.reviews} />
-        <AddComment id={this.props.asin} />
+        <AddComment id={this.props.selected} />
       </>
     );
   }

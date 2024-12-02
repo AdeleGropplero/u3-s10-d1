@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 import CommentArea from "./CommentArea";
 
@@ -60,11 +60,15 @@ class BookList extends Component {
 
         <Row>
           <Col className="col-8">
-            {this.state.selected && (
+            {this.state.selected ? (
               <CommentArea
                 /* asin={this.state.book.asin} */
                 selected={this.state.selected}
               />
+            ) : (
+              <Alert variant="warning">
+                Seleziona un libro per vedere i commenti!
+              </Alert>
             )}
           </Col>
         </Row>
